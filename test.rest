@@ -1,0 +1,56 @@
+GET http://localhost:8000/api/leads
+Authorization: Token 0e91c43e0a1c476239d796418a3d84bbb5cb04fca0e01ca1a54da98ab6ef2092
+
+
+###
+POST http://localhost:8000/api/leads/
+Authorization: Token 0e91c43e0a1c476239d796418a3d84bbb5cb04fca0e01ca1a54da98ab6ef2092
+content-type: application/json
+
+{
+    "name": "John Doe",
+    "email": "jdoe3@gmail.com",
+    "message": "Please contact John"
+}
+
+
+###
+POST http://localhost:8000/api/leads/
+content-type: application/json
+
+{
+    "name": "Ben Affleck",
+    "email": "gotham.batman@gmail.com",
+    "message": "Please contact Batman"
+}
+
+###
+DELETE http://localhost:8000/api/leads/13
+
+
+###
+
+POST http://localhost:8000/api/auth/register
+content-type: application/json
+
+{
+    "username": "Alex",
+    "email": "alexb@gmail.com",
+    "password": "123456"
+
+}
+
+###
+
+POST http://localhost:8000/api/auth/login
+content-type: application/json
+
+{
+    "username": "John",
+    "password": "123456"
+}
+
+###
+
+GET http://localhost:8000/api/auth/user
+Authorization: Token 6f55b970beb4d903de279dccb7d9504e1bb96d6091f3b1fa811ee1a053eb7fad
